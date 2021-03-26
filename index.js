@@ -18,6 +18,11 @@ Do the following:
    HINT: no function required
 */
 
+let votingAge = 34
+
+if(votingAge >= 18){
+  console.log('true')
+}
 
 
 /*
@@ -31,9 +36,15 @@ Do the following:
    HINT: no function required
 */
 
+let colorOne = "yellow"
 
+let colorTwo = "blue"
 
+if(colorTwo == "blue"){
+   colorOne = "red"
+}
 
+console.log(colorOne)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -46,8 +57,11 @@ Do the following:
    HINT: look up the Number method
 */
 
+let number = "12345"
 
+Number(number)
 
+console.log(number) 
 
 /*
 Task 1d - Multiply
@@ -58,11 +72,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a * b
   }
 
-
+console.log(multiply(5,6))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -74,11 +88,11 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(a){
+    return a * 7
 }
 
-
+console.log(dogYears(3))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -107,11 +121,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(age <= .30) {
+      return weight * .1
+    }
+    else if (age <= .7){
+      return weight * .05
+    }
+    else if (age < 1){
+      return weight * .04
+    }
+    else if (age >= 1){
+      if(weight < 5){
+        return  weight * .05
+      }
+      else if(weight <= 10){
+        return  weight * .04
+      }
+      else if (weight <= 15){
+        return  weight * .03
+      }
+      else if(weight > 15){
+        return  weight * .02
+      } 
+    }
   }
 
-
+console.log(hungryDog(15,1))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -232,14 +268,14 @@ function foo(){
     return 'bar';
 }
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Don't touch the code after this line! 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
-export default{
-    foo,
-    multiply,
-    dogYears,
-    hungryDog,
-    game,
-    miles,
-    feet,
-    annoyingSong,
-    grade
-}
+// export default{
+//     foo,
+//     multiply,
+//     dogYears,
+//     hungryDog,
+//     game,
+//     miles,
+//     feet,
+//     annoyingSong,
+//     grade
+// }
