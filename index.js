@@ -171,7 +171,7 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+    if(Math.floor(Math.random))
 }
   
   
@@ -187,10 +187,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(km){
+    return km * 0.621371
   }
-
+console.log(miles(9))
 
 
 //Task 5b - Feet to CM
@@ -201,11 +201,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48
   }
  
-
+console.log(feet(200))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -217,10 +217,13 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(numBottle){
+  for(let num = numBottle; num > 0; num-- ){
+    console.log (`${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num - 1} bottles of soda on the wall`)
   }
+}
 
+console.log(annoyingSong(5))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -237,11 +240,25 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if (score >= 90){
+    return 'you got an A'
+  }
+  else if (score >= 80){
+    return 'you got a B'
+  }
+  else if(score >=70){
+    return ' you got a C'
+  }
+  else if (score >=60){
+    return 'you got a D'
+  }
+  else if (score >=0){
+    return 'you get an F!'
+  }
   }
   
-  
+  console.log(grade(83))
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
